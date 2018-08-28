@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+var str = prompt("Enter your text, 1000")
+var arr = [".com",".ru",".net",".am",".kz",".avia",".tv",".az","password","buy","passwords","order","Money","card","card number","sms","$","cash","credit","email","@","%",] //you can add more spam key words
+
+function isLink(x)
+{
+  for(var i=0; i<arr.length; i++)
+  {
+if(x.includes(arr[i]))
+{
+  document.write( x, " is spam\n")
+  return
+}
+
+}
+document.write(x, "is not spam\n")
+}
+
+function isKyr(x) {
+if( /[а-я]/i.test(x))
+{
+document.write(x, " is spam\n")
+return
+
+}
+else
+{
+  document.write(x, " is not spam\n")
+}
+}
+isLink(str.toLowerCase())
+isKyr(str)
+
+
+</script>
+</head>
+<body>
+</body>
+</html>
