@@ -1,25 +1,13 @@
-var a=""
-var b = ""
-var arr1 =[]
-var arr2 = []
-for(var i=0;i<5;i++)
+var fs = require('fs');
+var data = fs.readFileSync('a.txt');
+//fs.readFile('a.txt', function() {});
+//console.log(data.toString())
+var arr = data.toString().split('\n');
+//console.log(arr[2])
+var str;
+for (i = arr.length-1; i>=0; i--)
 {
-  arr1[i] = a[i]
+  str+=(arr[i]+'\n')
 }
-for(var j = 0; j<5; j++)
-{
-  arr2[j] = b[j]
 
-}
-arr1.sort()
-arr2.sort()
-for(var k =0; k<5; k++)
-{
-  if(arr1[k]!=arr2[k])
-  {
-  console.log("is not unique")
-    return;
-  }
-
-}
-console.log("unique")
+fs.writeFile('b.txt', str, function(){});
