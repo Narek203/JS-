@@ -5,9 +5,9 @@ var data = fs.readFileSync('a.txt');
 var arr = data.toString().split('\n');
 //console.log(arr[2])
 var str;
-for (i = arr.length-1; i>=0; i--)
+for (i = arr.length-1; i >= 0; i--)
 {
-  str+=(arr[i]+'\n')
+  str += (arr[i] + '\n')
 }
 
 fs.writeFile('b.txt', str, function(){});
