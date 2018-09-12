@@ -1,13 +1,35 @@
-var fs = require('fs');
-var data = fs.readFileSync('a.txt');
-//fs.readFile('a.txt', function() {});
-//console.log(data.toString())
-var arr = data.toString().split('\n');
-//console.log(arr[2])
-var str;
-for (i = arr.length-1; i >= 0; i--)
+function StrangeRoot(a)
 {
-  str += (arr[i] + '\n')
-}
+  var a;
+  var b = String(Math.pow(a, 2));
+  var c;
+  if(String(Math.sqrt(a)).length > String(a).length)
+  {
+    c = String(Math.sqrt(a).toFixed(3));
+  }
+  else {
+    {
+      c = Math.sqrt(a)
+    }
+  }
+  for(let i=0; i<b.length; i++)
+  {
+    for(let j = 0; i<c.length; j++)
+    {
+      if(b[i]==c[j])
+      {
+console.log("'a' is strange root number")
+return;
+      }
 
-fs.writeFile('b.txt', str, function(){});
+      }
+    }
+    console.log("'a' isn't strong number")
+  }
+
+const express = require('express')
+const app = express()
+app.get('/', (req, res) => {
+  res.send(StrangeRoot(Number(req.query.name)))
+});
+app.listen(5500);
