@@ -1,0 +1,40 @@
+var VardanTime = function(x){
+return  function(y){
+let a = Math.random()
+if (a<=0.5)
+      {
+        return y + (Math.random()*(1.25-1)+1)
+          }
+else if(a>0.5 && a<=0.75)
+      {
+        return y + (Math.random() * (1.75-1.25)+1.25)
+          }
+else if(a>0.75 && a<=0.9)
+    {
+      return y + (Math.random()*(2.25-1.75)+1.75)
+        }
+else if(a>0.9 && a<=0.93)
+      {
+          return console.log("Inch vor patchar te xi das chka")
+              }
+else if(a>0.93 && a<=0.97)
+      {
+          return y + (Math.random()*(0.75-0.25)+0.25)
+            }
+else if (a>0.97 && a<=0.99)
+    {
+        return y + (Math.random()*(0.25))
+          }
+else if (a>0.99 && a<=1)
+    {
+      return console.log("Esor das@ jamanakina")
+              }
+            }
+          }
+var time = function(x){
+let a = parseInt(x);
+let b = x-a;
+let c = parseInt(1*b*60);
+console.log(a +" anc "+ c)
+}
+time(VardanTime(10)(11))
