@@ -1,0 +1,109 @@
+//1. Add two numbers without using addition operator
+/*
+var add = ( x, y ) => x - ( -y);
+ */
+
+/*
+ var add = function(x, y){
+   while(y-- != 0)
+   {
+     x++;
+   }
+   return x;
+ }
+ */
+
+//4. Swap two numbers without using third variable | 5 methods
+/*
+function swap ( x, y ){
+  x = x + y;
+  y = x - y;
+  x = x - y;
+  return [x,y]
+
+}
+*/
+//6. Find maximum, minimum of three numbers without using conditional statement and ternary operator (Only minimum)
+/*
+function Min(a,b,c){
+  let count = 0;
+  let min;
+  while(true){
+    a--;
+    b--;
+    c--;
+    count++;
+    if(a==0){
+     return count;
+    }
+    else if(b == 0){
+  return count;
+    }
+    else if(c == 0){
+      return count;
+    }
+  }
+}
+console.log(Min(12,27,3))
+*/
+
+//9. Print all numbers between 1 to N without using any loop
+
+/*
+function print(x){
+  if(x<=0){return};
+  console.log(x);
+  print(x-1);
+
+}
+*/
+
+
+//12. Find square of a number without using multiplication and division operator
+/*
+function square(x) {
+  let tmp = x;
+  for(let i = 1; i<tmp; i++) {
+    x += tmp;
+  }
+  return x;
+}
+console.log(square(4))
+*/
+
+//16. Perform Division of two numbers without using division operator// Number type is int
+/*
+function div(x,y){
+  let division = 0;
+  while(x>y){
+    x=x-y;
+    division++
+  }
+  return division;
+}
+*/
+
+//17. Generate 0 and 1 with 75% and 25% Probability
+/*
+let a = Math.random();
+if(a<0.75){
+  console.log(0)
+}
+else{
+  console.log(1)
+}
+*/
+
+//18. Generate Desired Random Numbers With Equal Probability
+/*
+function random(x,y)
+{
+  let a = Math.random();
+  if(a<0.5){
+    return x;
+  }
+  else{
+    return y;
+  }
+}
+*/
